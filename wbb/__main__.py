@@ -119,8 +119,8 @@ async def help_command(_, message):
                 ],
                 [
                     InlineKeyboardButton(
-                        text="System Stats 💻",
-                        callback_data="stats_callback",
+                        text="LOGS🙋",
+                        url="t.me/RIAS_LOGS",
                     ),
                     InlineKeyboardButton(
                         text="Support 🤦", url="t.me/rias_support"
