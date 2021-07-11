@@ -123,7 +123,7 @@ async def help_command(_, message):
                         callback_data="stats_callback",
                     ),
                     InlineKeyboardButton(
-                        text="Support 👨", url="t.me/WBBSupport"
+                        text="Support 🤦", url="t.me/rias_support"
                     ),
                 ],
             ]
@@ -139,8 +139,8 @@ async def help_command(_, message):
                     text="Commands ❓", callback_data="bot_commands"
                 ),
                 InlineKeyboardButton(
-                    text="Repo 🛠",
-                    url="https://github.com/thehamkercat/WilliamButcherBot",
+                    text="✨UPDATES✨",
+                    url="https://t.me/rias_updates",
                 ),
             ],
             [
@@ -161,7 +161,7 @@ async def help_command(_, message):
         ]
     )
     await message.reply(
-        f"Hey there! My name is {BOT_NAME}. I can manage your group with lots of useful features, feel free to add me to your group.",
+        f"yo, My name is [Rias](https://telegra.ph/file/3db16b9836175836b1058.jpg).a group manager bot which can help u to manage group easy  feel free to add me to your group.",
         reply_markup=keyboard,
     )
 
