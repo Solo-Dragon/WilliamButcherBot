@@ -113,8 +113,8 @@ async def help_command(_, message):
                         url=f"t.me/{BOT_USERNAME}?start=help",
                     ),
                     InlineKeyboardButton(
-                        text="Repo 🛠",
-                        url="https://github.com/thehamkercat/WilliamButcherBot",
+                        text="Updates",
+                        url="https://t.me/RIAS_UPDATES",
                     ),
                 ],
                 [
@@ -149,7 +149,7 @@ async def help_command(_, message):
                     callback_data="stats_callback",
                 ),
                 InlineKeyboardButton(
-                    text="Support 👨", url="t.me/WBBSupport"
+                    text="Support 🤦", url="t.me/RIAS_SUPPORT"
                 ),
             ],
             [
@@ -161,7 +161,7 @@ async def help_command(_, message):
         ]
     )
     await message.reply(
-        f"yo, My name is [Rias](https://telegra.ph/file/3db16b9836175836b1058.jpg).a group manager bot which can help u to manage group easy  feel free to add me to your group.",
+        f"Yo, My name is [Rias](https://telegra.ph/file/3db16b9836175836b1058.jpg).a group manager bot which can help u to manage group easY.  feel free to add me to your group.",
         reply_markup=keyboard,
     )
 
@@ -172,7 +172,7 @@ async def help_parser(name, keyboard=None):
             paginate_modules(0, HELPABLE, "help")
         )
     return (
-        """Hello {first_name}! My name is {bot_name}!
+        """Hello My name is [Rias](https://telegra.ph/file/6628eab52e5b05c0aa75b.jpg)
 I'm a group management bot with some usefule features.
 You can choose an option below, by clicking a button.
 Also you can ask anything in Support Group.
