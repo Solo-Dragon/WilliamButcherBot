@@ -30,7 +30,7 @@ from wbb.utils.http import get
 __MODULE__ = "Repo"
 __HELP__ = (
     "/repo - To Get My Github Repository Link "
-    "And Support Group Link"
+    "Note this is a old repo"
 )
 
 
