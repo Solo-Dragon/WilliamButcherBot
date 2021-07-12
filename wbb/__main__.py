@@ -129,7 +129,7 @@ async def help_command(_, message):
             ]
         )
         await message.reply(
-            "Pm Me For More Details.", reply_markup=keyboard
+            "[#online](https://telegra.ph/file/4f4fb79c7111300375157.mp4).", reply_markup=keyboard
         )
         return
     keyboard = InlineKeyboardMarkup(
