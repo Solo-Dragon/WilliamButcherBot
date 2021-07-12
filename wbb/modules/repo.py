@@ -29,8 +29,8 @@ from wbb.utils.http import get
 
 __MODULE__ = "Repo"
 __HELP__ = (
-    "/repo - To Get My Github Repository Link "
-    "And Support Group Link"
+    "/repo - this cmd was disabled "
+    "for info join support chat"
 )
 
 
@@ -48,5 +48,5 @@ async def repo(_, message):
         )
         count += 1
 
-    text = f"""[SUPPORT](https://t.me/RIAS_SUPPORT) | [Owner](t.me/itz_samrat)
+    text = [SUPPORT](https://t.me/RIAS_SUPPORT) | [Owner](t.me/itz_samrat)
 """
