@@ -38,7 +38,7 @@ __HELP__ = (
 @capture_err
 async def repo(_, message):
     users = await get(
-        "https://api.github.com/repos/thehamkercat/williambutcherbot/contributors"
+        "https://api.github.com/repos/thundertech9/RIAS/contributors"
     )
     list_of_users = ""
     count = 1
@@ -48,6 +48,11 @@ async def repo(_, message):
         )
         count += 1
 
-    text = f"""[owner](https://t.me/itz_samrat) | [support Group](t.me/RIAS_support)
-"""
-    
+    text = f"""[Github](https://github.com/thundertech9/RIAS) | [Group](t.me/rias_support)
+```----------------
+| SOLO |
+----------------```
+{list_of_users}"""
+    await app.send_message(
+        message.chat.id, text=text, disable_web_page_preview=True
+    )
