@@ -32,10 +32,10 @@ from wbb.core.decorators.errors import capture_err
 from wbb.modules.userbot import edit_or_reply
 from wbb.utils.filter_groups import chatbot_group
 
-__MODULE__ = "ChatBot"
+__MODULE__ = "Ai ChatBot"
 __HELP__ = """
-/chatbot [ENABLE|DISABLE] To Enable Or Disable ChatBot In Your Chat.
-.chatbot [ENABLE|DISABLE] To Do The Same For Userbot."""
+/chatbot [ON|OFF] To Enable Or Disable ChatBot In Your Chat.
+.chatbot [ON|OFF] To Do The Same For Userbot."""
 
 active_chats_bot = []
 active_chats_ubot = []
@@ -44,26 +44,26 @@ active_chats_ubot = []
 async def chat_bot_toggle(db, message: Message):
     status = message.text.split(None, 1)[1].lower()
     chat_id = message.chat.id
-    if status == "enable":
+    if status == "ON":
         if chat_id not in db:
             db.append(chat_id)
-            text = "Chatbot Enabled!"
+            text = "AI Chatbot was Activated!"
             return await edit_or_reply(message, text=text)
         await edit_or_reply(
-            message, text="ChatBot Is Already Enabled."
+            message, text="Allready Ai on for this chat."
         )
-    elif status == "disable":
+    elif status == "OFF":
         if chat_id in db:
             db.remove(chat_id)
             return await edit_or_reply(
-                message, text="Chatbot Disabled!"
+                message, text="Ai Disabled!"
             )
         await edit_or_reply(
-            message, text="ChatBot Is Already Disabled."
+            message, text="Ai ChatBot Is Already Disabled."
         )
     else:
         await edit_or_reply(
-            message, text="**Usage**\n/chatbot [ENABLE|DISABLE]"
+            message, text="**Usage**\n/chatbot [ON|OFF]"
         )
 
 
@@ -75,7 +75,7 @@ async def chat_bot_toggle(db, message: Message):
 async def chatbot_status(_, message: Message):
     if len(message.command) != 2:
         return await edit_or_reply(
-            message, text="**Usage**\n/chatbot [ENABLE|DISABLE]"
+            message, text="**Usage**\n/chatbot [ON|OFF]"
         )
     await chat_bot_toggle(active_chats_bot, message)
 
@@ -128,7 +128,7 @@ async def chatbot_talk(_, message: Message):
 async def chatbot_status_ubot(_, message: Message):
     if len(message.text.split()) != 2:
         return await edit_or_reply(
-            message, text="**Usage**\n.chatbot [ENABLE|DISABLE]"
+            message, text="**Usage**\n.chatbot [ON|OFF]"
         )
     await chat_bot_toggle(active_chats_ubot, message)
 
